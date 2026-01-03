@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: loans-service
+  datasource:
+    #url: ${DB_URL:jdbc:mysql://localhost:2323/${DB_SCHEMA:eazybank}}
+    #username: ${DB_USER_NAME:root}
+    #password: ${DB_PASSWORD:Root@3064016837}
+    url: ${DB_URL:jdbc:h2:mem:testdb}
+    username: ${DB_USER_NAME:sa}
+    password: ${DB_PASSWORD:}
+  jpa:
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+    hibernate:
+      ddl-auto: update
+
+server:
+  port: 8090
+
+build:
+  version: "3.0"
+
+loans:
+  message: "Welcome to EazyBank loans related local APIs "
+  contactDetails:
+    name: "Amaal Grega - Developer"
+    email: "amaal@eazybank.com"
+  onCallSupport:
+    - (452) 456-2176
+    - (546) 764-8934

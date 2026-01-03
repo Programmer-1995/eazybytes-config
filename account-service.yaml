@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: account-service
+  h2:
+    console:
+      enabled: true
+  datasource:
+    #url: ${DB_URL:jdbc:mysql://localhost:2323/${DB_SCHEMA:eazybank}}
+    #username: ${DB_USER_NAME:root}
+    #password: ${DB_PASSWORD:Root@3064016837}
+    url: ${DB_URL:jdbc:h2:mem:testdb}
+    username: ${DB_USER_NAME:sa}
+    password: ${DB_PASSWORD:}
+  jpa:
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+    hibernate:
+      ddl-auto: update
+
+server:
+  port: 8080
+
+build:
+  version: "3.0"
+
+accounts:
+  message: "Welcome to EazyBank accounts related local APIs"
+  contactDetails:
+    name: "John Doe- Developer"
+    email: "john@eazybank.com"
+  onCallSupport:
+    -(555)555-1234
+    -(555)523-1345
