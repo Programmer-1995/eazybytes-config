@@ -5,9 +5,12 @@ spring:
     console:
       enabled: true
   datasource:
-    url: jdbc:mysql://localhost:2323/accounts_db
-    username: ${DB_USER_NAME:root}
-    password: ${DB_PASSWORD:Root@3064016837}
+    url: ${DB_URL:jdbc:h2:mem:testdb}
+    username: ${DB_USER_NAME:sa}
+    password: ${DB_PASSWORD:}
+    #url: jdbc:mysql://localhost:2323/accounts_db
+    #username: ${DB_USER_NAME:root}
+    #password: ${DB_PASSWORD:Root@3064016837}
   jpa:
     properties:
       hibernate:
